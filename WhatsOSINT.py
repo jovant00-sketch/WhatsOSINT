@@ -67,17 +67,16 @@ def main():
     |[_]|    
     |:::|    
     |:::|    
-    `\\   \\   
-      \\_=_\\ 
+    `\   \   
+      \_=_\ 
     Consulta de datos de número de WhatsApp
     """ + Style.RESET_ALL)
 
-    numero = input("Introduce el número de teléfono (con código de país): ")
+    # Número predeterminado - AUTOMATICO
+    numero = "+38766325978"
     
-    # Validar si se ingresó un número
-    if not numero.strip():
-        print("Debe ingresar un número de teléfono válido.")
-        return
+    print(f"{Fore.CYAN}Buscando datos de: {numero}{Style.RESET_ALL}")
+    print("-" * 50)
     
     # Consultar datos del número
     consultar_numero_whatsapp(numero)
